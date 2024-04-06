@@ -3,8 +3,6 @@ import { Outlet } from 'react-router-dom';
 import './AppLayout.css';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AppLayout = () => {
   const [buttonClicked,setButtonClicked] = useState(false);
@@ -22,7 +20,7 @@ const AppLayout = () => {
   return <div>
    <header>
     <Container>
-      <h1><Link to='/browse'><img src='./assets/logo.png'/></Link></h1>
+      <h1><Link to='/browse'><img src='./assets/logo.png' alt='넷플릭스'/></Link></h1>
       <nav>
         <span>메뉴</span>
         <ul>

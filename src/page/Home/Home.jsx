@@ -60,7 +60,7 @@ const Home = () => {
             </Container>
             <div className='cover'></div>
           </div>
-          <div className='bg-wrap'><img src='./assets/bg_main.jpg'/></div>
+          <div className='bg-wrap'><img src='./assets/bg_main.jpg' alt='배경이미지'/></div>
         </div>
       </section>
       {/* //main-banner */}
@@ -68,12 +68,12 @@ const Home = () => {
         <div className='membership'>
           <Container>
             <div className='img-box'>
-              <img src='./assets/popcorn.png'/>
+              <img src='./assets/popcorn.png' alt='팝콘이미지'/>
             </div>
             <div className='text-box'>
               <h2>5500원이면 만날 수 있는 넷플릭스.</h2>
               <p>광고형 스탠다드 멤버십에 가입하세요.</p>
-              <a>자세히 알아보기 <FontAwesomeIcon icon={faChevronRight} /></a>
+              <a href='/'>자세히 알아보기 <FontAwesomeIcon icon={faChevronRight} /></a>
             </div>
           </Container>
         </div>
@@ -89,7 +89,7 @@ const Home = () => {
               </Col>
               <Col lg={6} className='col2'>
                 <div className='media-wrap'>
-                  <div className='img-box'><img src='./assets/tv1.png'/></div>
+                  <div className='img-box'><img src='./assets/tv1.png' alt='배경이미지'/></div>
                   <div className='video-box'><video autoPlay playsInline muted loop><source src='./assets/video1.m4v'></source></video></div>
                 </div>
               </Col>
