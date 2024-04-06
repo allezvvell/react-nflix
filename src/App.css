@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+/* fonts */
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 100;
+    font-display: optional;
+    src: url('./fonts/NetflixSans_W_Th.woff2') format('woff2'),url('./fonts/NetflixSans_W_Th.woff') format('woff')
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 300;
+    font-display: optional;
+    src: url('./fonts/NetflixSans_W_Lt.woff2') format('woff2'),url('./fonts/NetflixSans_W_Lt.woff') format('woff')
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 400;
+    font-display: optional;
+    src: url('./fonts/NetflixSans_W_Rg.woff2') format('woff2'),url('./fonts/NetflixSans_W_Rg.woff') format('woff')
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 700;
+    font-display: optional;
+    src: url('./fonts/NetflixSans_W_Md.woff2') format('woff2'),url('./fonts/NetflixSans_W_Md.woff') format('woff')
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 800;
+    font-display: optional;
+    src: url('./fonts/NetflixSans_W_Bd.woff2') format('woff2'),url('./fonts/NetflixSans_W_Bd.woff') format('woff')
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 900;
+    font-display: optional;
+    src: url('./fonts/NetflixSans_W_Blk.woff2') format('woff2'),url('./fonts/NetflixSans_W_Blk.woff') format('woff')
+} 
+
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    font-family: 'Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif';
+    font-size: 16px;
+}
+
+input {
+    background: transparent;
+    border: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+input:focus {
+    outline: none;
+}
+ul,li,ol,dl,dt,dd {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+
+/* 반응형 */
+@media (max-width: 768px){
+    html {
+        font-size: 12px;
+    }
+}
+@media (max-width: 480px){
+    html{
+        font-size: 10px;
+    }
 }
