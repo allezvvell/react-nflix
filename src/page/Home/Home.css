@@ -24,8 +24,8 @@ body {
 /* header */
 .header h1 a {
     display: block;
-    margin-top: 1rem;
-    width: 11rem;
+    margin-top: 0rem;
+    width: 8rem;
 }
 .header h1 a img {
     width: 100%;
@@ -245,8 +245,7 @@ body {
 @media (max-width:768px){
     /* header */
     .header h1 a {
-        margin-top: 1rem;
-        width: 11rem;
+        width: 8rem;
     }
     /* membership */
     #membership {

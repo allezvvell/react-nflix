@@ -1,3 +1,16 @@
+/* 로더 */
+.loader-area {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+.loader-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/* 배너 */
 .banner {
     height: 70vh;
     background-position: center;

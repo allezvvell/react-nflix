@@ -73,7 +73,7 @@ const Home = () => {
             <div className='text-box'>
               <h2>5500원이면 만날 수 있는 넷플릭스.</h2>
               <p>광고형 스탠다드 멤버십에 가입하세요.</p>
-              <a href='/'>자세히 알아보기 <FontAwesomeIcon icon={faChevronRight} /></a>
+              <a href='https://netflix-allezvvell.netlify.app/'>자세히 알아보기 <FontAwesomeIcon icon={faChevronRight} /></a>
             </div>
           </Container>
         </div>
