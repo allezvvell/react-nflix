@@ -12,8 +12,31 @@
 }
 /* 배너 */
 .banner {
+    overflow: hidden;
+    position: relative;
     height: 70vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.banner::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to top,#000,transparent);
+}
+.banner .text-area {
+    display:flex;
+    padding-left: 6rem;
+    width: 36%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner .text-area > * {
+    z-index: 2;
 }
