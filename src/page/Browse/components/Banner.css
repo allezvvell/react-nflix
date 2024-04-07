@@ -28,10 +28,12 @@
     bottom: 0;
     background: linear-gradient(to top,#000,transparent);
 }
+.banner .container {
+    height:  100%;
+}
 .banner .text-area {
     display:flex;
-    padding-left: 6rem;
-    width: 36%;
+    width: 50%;
     height: 100%;
     flex-direction: column;
     justify-content: center;
@@ -39,4 +41,31 @@
 
 .banner .text-area > * {
     z-index: 2;
+}
+
+.banner .text-area h2 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.banner .text-area p {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px){
+    .banner .text-area {
+        width: 90%;
+    } 
+    .banner .text-area h2 {
+        font-size: 2.5rem;
+    }
+    .banner .text-area p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px){
+    .banner .container {
+        padding: 0 1rem;
+    }
 }
