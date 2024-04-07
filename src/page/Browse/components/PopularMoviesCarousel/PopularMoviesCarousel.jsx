@@ -1,25 +1,14 @@
 import React from 'react';
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import './PopularMoviesCarousel.css'
 import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies'
-import MovieCards from '../MovieCard/MovieCards';
+import { faFire } from '@fortawesome/free-solid-svg-icons';
+import MovieCarousel from '../../../../common/MovieCarousel/MovieCarousel';
+import { responsive } from '../../../../constants/responsive';
+
 
 const PopularMoviesCarousel = () => {
-    const {data,isLoading,isError,error} = usePopularMoviesQuery();
-    const responsive = {
-        desktop: {
-            breakpoint: { min: 1024 },
-            items: 6
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 3
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 2
-        }
-        };
+  const {data,isLoading,isError,error} = usePopularMoviesQuery();
   if(isLoading){
     return <h2>Loading...</h2>
   }
@@ -27,18 +16,13 @@ const PopularMoviesCarousel = () => {
     return <p>{error.message}</p>
   }        
   return (
-    <div>
-        <h2>Popular Movies</h2>
-        <Carousel
-            infinite={true}
-            centerMode={true}
-            itemClass='movie-carousel p-1'
-            containerClass='carousel-container'
-            responsive={responsive}
-        >
-        {data?.results.map((movie,index) => <div key={index}><MovieCards movie={movie}/></div>)}  
-        </Carousel>
-    </div>
+    <section id='popular-movies'>
+      <MovieCarousel 
+        movies={data.results} 
+        title={'Popular Movies'} 
+        icon={faFire} 
+        responsive={responsive}/>
+    </section>
   )
 }
 
