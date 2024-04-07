@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePopularMoviesQuery } from '../../../hooks/usePopularMovies';
+import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
 import { Bars } from 'react-loader-spinner';
 import './Banner.css';
 import { Container } from 'react-bootstrap'
@@ -7,7 +7,6 @@ import { Container } from 'react-bootstrap'
 
 const Banner = () => {
   const {data,isLoading,isError,error} = usePopularMoviesQuery();
-  console.log(data);
 
   if(isLoading){
     return<div className='loader-area'>

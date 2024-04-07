@@ -1,5 +1,6 @@
 import React from 'react';
-import Banner from './components/Banner';
+import Banner from './components/Banner/Banner';
+import PopularMoviesCarousel from './components/PopularMoviesCarousel/PopularMoviesCarousel';
 
 
 // 1. 배너 => popular 영화의 첫번째 아이템을 보여주자
@@ -10,7 +11,8 @@ import Banner from './components/Banner';
 const Browse = () => {
   return (
     <div>
-      <Banner></Banner>
+      <Banner />
+      <PopularMoviesCarousel />
     </div>
   )
 }
