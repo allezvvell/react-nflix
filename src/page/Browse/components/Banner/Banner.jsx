@@ -7,9 +7,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
- 
-
 const Banner = () => {
   const settings = {
     autoplay:true,
@@ -22,6 +19,7 @@ const Banner = () => {
     slidesToScroll: 1
   }
   const {data,isLoading,isError,error} = usePopularMoviesQuery();
+  const movieList = data?.results.slice(0,4);
   if(isLoading){
     return<div className='loader-area'>
       <Bars
@@ -39,36 +37,18 @@ const Banner = () => {
   }
   return (
     <Slider {...settings} className='slick-slider-wrap'>
-      <div className='slick-item'>
-        <div style={{color:'#fff',backgroundImage:`url('https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[0].backdrop_path}')`}}>
+      {movieList.map((movie,index)=> {
+        return <div className='slick-item' key={index}>
+        <div style={{backgroundImage:`url('https://image.tmdb.org/t/p/original${movie.backdrop_path}')`}}>
           <Container>
             <div className='txt-box'>
-              <h2>{data?.results[0].title}</h2>
-              <p>{data?.results[0].overview}</p>
+              <h2>{movie.title}</h2>
+              <p>{movie.overview}</p>
             </div>
           </Container>
         </div>
       </div>
-      <div className='slick-item'>
-        <div style={{color:'#fff',backgroundImage:`url('https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[1].backdrop_path}')`}}>
-          <Container>
-            <div className='txt-box'>
-              <h2>{data?.results[1].title}</h2>
-              <p>{data?.results[1].overview}</p>
-            </div>
-          </Container>
-        </div>
-      </div>
-      <div className='slick-item'>
-        <div style={{color:'#fff',backgroundImage:`url('https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[2].backdrop_path}')`}}>
-          <Container>
-            <div className='txt-box'>
-              <h2>{data?.results[2].title}</h2>
-              <p>{data?.results[2].overview}</p>
-            </div>
-          </Container>
-        </div>
-      </div>
+      })}
     </Slider>
 );
 }

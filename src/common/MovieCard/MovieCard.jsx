@@ -9,7 +9,7 @@ import { faUserGroup } from '@fortawesome/free-solid-svg-icons';
 const MovieCard = ({movie}) => {
   return (
     <div className='movie-card'
-    style={{backgroundImage:`url('https://media.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}')`}}>
+    style={{backgroundImage:`url('https://media.themoviedb.org/t/p/original${movie.poster_path}')`}}>
      <div className='movie-info'>
         <h3>{movie.title}</h3>
         <p>{movie.release_date}</p>
