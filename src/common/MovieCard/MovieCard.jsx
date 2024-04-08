@@ -4,16 +4,30 @@ import './MovieCard.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-regular-svg-icons';
 import { faUserGroup } from '@fortawesome/free-solid-svg-icons';
+import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
+import image from '../../assets/noImage.jpg'
 
 
 const MovieCard = ({movie}) => {
+  const {data:genreData,isError,isLoading,error} = useMovieGenreQuery();
+  const showGenre = (genreIdList) => {
+    if(!genreData){
+      return []
+    }
+    const genreNameList = genreIdList.map((id) => {
+      const genreObj = genreData.find((obj) => obj.id === id);
+      return genreObj.name
+    });
+    return genreNameList
+  }
+
   return (
     <div className='movie-card'
-    style={{backgroundImage:`url('https://media.themoviedb.org/t/p/original${movie.poster_path}')`}}>
+    style={{backgroundImage:movie.poster_path?`url('https://media.themoviedb.org/t/p/original${movie.poster_path}')`:`url('${image}')`}}>
      <div className='movie-info'>
         <h3>{movie.title}</h3>
         <p>{movie.release_date}</p>
-        {movie.genre_ids.map((id,index) => {
+        {showGenre(movie.genre_ids).map((id,index) => {
            return <Badge bg='danger' key={index}>{id}</Badge>
         })}
         <div className='detail'>

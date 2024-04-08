@@ -1,7 +1,6 @@
 import React from 'react';
 import 'react-multi-carousel/lib/styles.css';
-import './PopularMoviesCarousel.css'
-import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies'
+import { usePopularMoviesQuery } from '../../../../hooks/useMovies'
 import { faFire } from '@fortawesome/free-solid-svg-icons';
 import MovieCarousel from '../../../../common/MovieCarousel/MovieCarousel';
 import { responsive } from '../../../../constants/responsive';
@@ -19,7 +18,7 @@ const PopularMoviesCarousel = () => {
     <section id='popular-movies'>
       <MovieCarousel 
         movies={data.results} 
-        title={'Popular Movies'} 
+        title='Popular Movies' 
         icon={faFire} 
         responsive={responsive}/>
     </section>

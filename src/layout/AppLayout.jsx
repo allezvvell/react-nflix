@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet,useNavigate } from 'react-router-dom';
 import './AppLayout.css';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+
+
 const AppLayout = () => {
   const [buttonClicked,setButtonClicked] = useState(false);
-  const searchEvent = (e) => {
+  const [keyword,setKeyword] = useState('');
+  const navigate = useNavigate();
+  const searchBarEvent = (e) => {
     e.preventDefault();
     const frm = e.target.parentElement;
     if(!buttonClicked){
@@ -17,6 +21,11 @@ const AppLayout = () => {
       frm.classList.remove('active')
     }
   }
+  const searchByKeyword = (e) => {
+    e.preventDefault();
+    navigate(`/browse/movies?q=${keyword}`);
+    setKeyword('');
+  }
   return <div>
    <header>
     <Container>
@@ -26,13 +35,18 @@ const AppLayout = () => {
         <ul>
           <li><Link to='/browse'>Home</Link></li>
           <li><Link to='/browse/movies'>Movies</Link></li>
-          <li><Link>TV</Link></li>
         </ul>
       </nav>
       <div className='search-box'>
-        <form>
-          <button onClick={searchEvent}></button>
-          <div className='input-box'><input type='text' placeholder='제목,사람,장르'/></div>
+        <form action='/' onSubmit={searchByKeyword}>
+          <button onClick={searchBarEvent} type='button'></button>
+          <div className='input-box'>
+            <input 
+              type='text' 
+              value={keyword}
+              onChange={(e) =>{setKeyword(e.target.value)}} 
+              placeholder='search'/>
+          </div>
         </form>
       </div>
     </Container>

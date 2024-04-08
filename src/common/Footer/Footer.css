@@ -1,0 +1,19 @@
+#footer {
+    padding: 2rem 0;
+    color: #fff;
+    background: #222;
+    text-align: center;
+}
+#footer ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+#footer ul li {display: inline-block;}
+#footer ul li a {
+    margin: 0 0.5rem;
+    font-size: 2rem;
+    color: #fff;
+}
+#footer p {
+    margin: 0.5rem 0;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
+import { usePopularMoviesQuery } from '../../../../hooks/useMovies';
 import { Bars } from 'react-loader-spinner';
 import './Banner.css';
 import { Container } from 'react-bootstrap';

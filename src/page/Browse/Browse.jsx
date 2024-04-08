@@ -1,18 +1,19 @@
 import React from 'react';
 import Banner from './components/Banner/Banner';
 import PopularMoviesCarousel from './components/PopularMoviesCarousel/PopularMoviesCarousel';
+import TopRatedMoviesCarousel from './components/TopRatedMoviesCarousel/TopRatedMoviesCarousel';
+import UpcomingMoviesCarousel from './components/UpcomingMoviesCarousel/UpcomingMoviesCarousel';
+import Footer from '../../common/Footer/Footer';
 
-
-// 1. 배너 => popular 영화의 첫번째 아이템을 보여주자
-// 2. popular movies
-// 3. top rated movie
-// 4. upcoming movie 
 
 const Browse = () => {
   return (
     <div>
       <Banner />
       <PopularMoviesCarousel />
+      <TopRatedMoviesCarousel />
+      <UpcomingMoviesCarousel /> 
+      <Footer />
     </div>
   )
 }

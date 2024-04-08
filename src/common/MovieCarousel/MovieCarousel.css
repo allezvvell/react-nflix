@@ -1,0 +1,19 @@
+.carousel-wrap h2 {
+    letter-spacing: -1px;
+    font-size: 2rem;
+    color: #fff;
+}
+.carousel-container {
+    overflow: hidden;
+    height: 440px;
+}
+
+.movie-carousel {
+    margin: 0 0.5rem ;
+}
+
+@media (max-width: 480px){
+    .carousel-wrap .container {
+        padding: 0 2rem;
+    }
+}
