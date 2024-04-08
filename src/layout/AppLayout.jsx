@@ -23,18 +23,18 @@ const AppLayout = () => {
   }
   const searchByKeyword = (e) => {
     e.preventDefault();
-    navigate(`/browse/movies?q=${keyword}`);
+    navigate(`/movies?q=${keyword}`);
     setKeyword('');
   }
   return <div>
    <header>
     <Container>
-      <h1><Link to='/browse'><img src='./assets/logo.png' alt='넷플릭스'/></Link></h1>
+      <h1><Link to='/'><img src='./assets/logo.png' alt='넷플릭스'/></Link></h1>
       <nav>
         <span>메뉴</span>
         <ul>
-          <li><Link to='/browse'>Home</Link></li>
-          <li><Link to='/browse/movies'>Movies</Link></li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/movies'>Movies</Link></li>
         </ul>
       </nav>
       <div className='search-box'>
