@@ -9,7 +9,7 @@ import image from '../../assets/noImage.jpg'
 
 
 const MovieCard = ({movie}) => {
-  const {data:genreData,isError,isLoading,error} = useMovieGenreQuery();
+  const {data:genreData} = useMovieGenreQuery();
   const showGenre = (genreIdList) => {
     if(!genreData){
       return []
