@@ -27,7 +27,7 @@ const SearchMovieCard = ({movie}) => {
             style={{backgroundImage:movie.poster_path?`url('https://media.themoviedb.org/t/p/original${movie.poster_path}')`:`url('${image}')`}}
             >
             <div className='desc-wrap'>
-                <span className='poster' style={{backgroundImage:`url('https://media.themoviedb.org/t/p/original${movie.poster_path}')`}}></span>
+                <img src={`https://media.themoviedb.org/t/p/original${movie.poster_path}`} alt={movie.title}/>
                 <span className='title'>{movie.title}</span>
                 <div>{getGenreList(movie.genre_ids).map((name,index)=>{return <Badge bg='danger' key={index}>{name}</Badge>})}</div>
                 <span className='go-detail'>상세 페이지</span>

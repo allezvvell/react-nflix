@@ -22,16 +22,14 @@
 .search-movie-card:hover .desc-wrap {
     opacity: 1;
 }
-.desc-wrap .poster {
+.desc-wrap img {
     display: inline-block;
     width: 40%;
-    height: 50%;
-    background-position: center;
-    background-size: cover;
-    transform: scale(0.95);
+    transform: scale(0.9);
     transition: all 0.5s ease-in-out;
+    vertical-align: top;
 }
-.search-movie-card:hover .desc-wrap .poster {
+.search-movie-card:hover .desc-wrap img {
     transform: scale(1)
 }
 .desc-wrap .title {
@@ -43,6 +41,7 @@
     margin: 0 0.2rem 0.5rem;
 }
 .desc-wrap .go-detail {
+    font-size: 1rem;
     border-bottom: 1px solid #fff;
 }
 
@@ -57,5 +56,13 @@
     .search-movie-card {
         height: 35rem;
         margin-bottom: 2rem;
+    }
+}
+@media (max-width:480px) {
+    .desc-wrap .title {
+        font-size: 1.5rem;
+    }
+    .desc-wrap .go-detail {
+        font-size: 1.2rem;
     }
 }

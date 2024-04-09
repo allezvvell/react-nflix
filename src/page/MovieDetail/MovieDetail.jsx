@@ -5,8 +5,12 @@ import { Bars } from 'react-loader-spinner';
 import Alert from 'react-bootstrap/Alert';
 import noImage from '../../assets/noImage.jpg';
 import './MovieDetail.css';
-import { Container,Row,Col } from 'react-bootstrap';
+import { Container,Row,Col,Button } from 'react-bootstrap';
 import { Badge } from 'react-bootstrap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from '@fortawesome/free-regular-svg-icons';
+import { faPlay, faUserGroup } from '@fortawesome/free-solid-svg-icons';
+
 
 const MovieDetail = () => {
   const {id} = useParams();
@@ -33,22 +37,32 @@ const MovieDetail = () => {
       <div 
         className='bg-top' 
         style={{backgroundImage:data.backdrop_path?`url(https://image.tmdb.org/t/p/original${data.backdrop_path})`:`url(${noImage})`}}>
-          <div className='tagline'>{ data.tagline&&`"${data.tagline}"`}</div>
+          <Container><div className='tagline'>{ data.tagline&&`"${data.tagline}"`}</div></Container>
         </div>
       <div className='detail-content'>
         <div className='detail-box'>
           <Container>
             <Row>
               <Col lg={6} className='poster-col'>
-                <div 
-                  className='poster-img' 
-                  style={{backgroundImage:data.poster_path?`url(https://image.tmdb.org/t/p/original${data.poster_path})`:`url(${noImage})`}}></div>
+                {data.poster_path?<img src={`https://image.tmdb.org/t/p/original${data.poster_path}`} alt={data.title}/>:noImage}
               </Col>
               <Col lg={6}>
                 <div className='desc'>
-                  <div>{genreList.map((genre,index) => <Badge bg='danger' key={index}>{genre}</Badge>)}</div>
+                  <div className='genre'>{genreList.map((genre,index) => <Badge bg='danger' key={index}>{genre}</Badge>)}</div>
                   <h2>{data.title}</h2>
                   <h3>{data.original_title}</h3>
+                  <ul className='top-list'>
+                    <li className='vote-average'><FontAwesomeIcon icon={faStar} />{Math.round(data.vote_average*10)/10}</li>
+                    <li className='popularity'><FontAwesomeIcon icon={faUserGroup} />{data.popularity}</li>
+                    <li className=''><Button variant='light'><FontAwesomeIcon icon={faPlay} /> 관련영상</Button></li>
+                  </ul>
+                  <div className='overview'>{data.overview}</div>
+                  <ul className='bottom-list'>
+                    <li><Badge bg='danger'>개봉일</Badge>{data.release_date}</li>
+                    <li><Badge bg='danger'>러닝타임</Badge>{data.runtime}분</li>
+                    <li><Badge bg='danger'>전체예산</Badge>${data.budget}</li>
+                    <li><Badge bg='danger'>수익</Badge>${data.revenue}</li>
+                  </ul>
                 </div>
               </Col>
             </Row>

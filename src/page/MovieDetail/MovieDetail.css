@@ -2,9 +2,6 @@
     padding-top: 50vh;
 }
 .detail-wrap .bg-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -24,9 +21,16 @@
     bottom: 0;
     background: linear-gradient(to top,#000,transparent);
 }
+.detail-wrap .bg-top .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .detail-wrap .bg-top .tagline {
     position: relative;
     z-index: 10;
+    font-size: 1.2rem;
 }
 .detail-wrap .detail-content {
     padding-top: 10rem;
@@ -35,14 +39,96 @@
     background:black;
     color: white;
 }
-
 .detail-box .poster-col {
     text-align: right;
 }
-.detail-box .poster-img {
+.detail-box .poster-col img {
+   width: 80%;
+}
+.detail-box .desc .genre .badge {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+.detail-box .desc h2 {
+    font-size: 3rem;
+}
+.detail-box .desc h3 {
+    font-size: 2rem;
+}
+.detail-box .top-list {
+    padding-left: 0;
+    margin: 3rem 0 1rem;
+}
+.detail-box .top-list li {
     display: inline-block;
-    width: 80%;
-    height: 50rem;
-    background-size: cover;
-    background-position: top;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+.detail-box .overview {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.detail-box .bottom-list {
+    padding-left: 0;
+}
+.detail-box .bottom-list .badge {
+    padding: 0.6rem 0;
+    margin-right: 1rem;
+    width: 8rem;
+    font-size: 1rem;
+}
+.detail-box .bottom-list li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* 반응형 */
+@media (max-width:1200px){
+    .detail-box .poster-col {
+        text-align: center;
+    }
+    .detail-box .poster-col img {
+        width: 100%;
+    }
+}
+@media (max-width:992px){
+    .detail-box .poster-col img {
+        margin-bottom: 3rem;
+        width: 50%;
+    }
+}
+@media (max-width:480px){
+    .detail-wrap .bg-top .container {
+        padding: 0 3rem;
+    }
+    .detail-wrap .bg-top .tagline {
+        font-size: 1.5rem;
+    }
+    .detail-wrap .detail-content {
+        padding-top: 6rem;
+    }
+    .detail-box .container {
+        padding: 0 3rem;
+    }
+    .detail-box .poster-col img {
+        margin-bottom: 5rem;
+    }
+    .detail-box .desc .genre .badge {
+        font-size: 1.3rem;
+    }
+    .detail-box .top-list li {
+        font-size: 1.6rem;
+    }
+    .detail-box .top-list li button {
+        font-size: 1.6rem;
+    }
+    .detail-box .overview {
+        margin-bottom: 2rem;
+    }
+    .detail-box .bottom-list .badge {
+        font-size: 1.3rem;
+    }
 }
