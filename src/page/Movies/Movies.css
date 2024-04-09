@@ -1,7 +1,31 @@
 .movies-wrap {
-    padding-top: 6rem;
+    padding: 6rem 0;
 }
 
 .movies-wrap .movie-card {
     margin-bottom: 1.5rem;
+}
+
+/* pagination */
+.movies-wrap .pagination {
+    --bs-pagination-border-width: 0;
+    justify-content: center;
+    padding: 3rem 0 0;
+}
+.movies-wrap .page-link {
+    color: rgb(229,9,20);
+    background: transparent;
+}
+.movies-wrap .active .page-link {
+    color: #fff;
+    background: rgb(229,9,20);
+}
+.movies-wrap .page-item {
+
+}
+
+@media (max-width:570px) {
+    .movies-wrap {
+        padding: 6rem 3rem;
+    }
 }

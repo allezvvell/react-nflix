@@ -6,6 +6,7 @@ import { Container } from 'react-bootstrap';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Alert from 'react-bootstrap/Alert';
 
 const Banner = () => {
   const settings = {
@@ -19,6 +20,7 @@ const Banner = () => {
     slidesToScroll: 1
   }
   const {data,isLoading,isError,error} = usePopularMoviesQuery();
+  console.log(data?.results);
   const movieList = data?.results.slice(0,4);
   if(isLoading){
     return<div className='loader-area'>
@@ -33,7 +35,7 @@ const Banner = () => {
     </div>
   }
   if(isError){
-    return <div>{error.message}</div>
+    return  <Alert variant={'light'}>{error.message}</Alert>
   }
   return (
     <Slider {...settings} className='slick-slider-wrap'>

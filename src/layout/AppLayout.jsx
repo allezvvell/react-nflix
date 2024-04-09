@@ -29,7 +29,7 @@ const AppLayout = () => {
   return <div>
    <header>
     <Container>
-      <h1><Link to='/'><img src='./assets/logo.png' alt='넷플릭스'/></Link></h1>
+      <h1><Link to='/'><img src='./assets/logo.png' alt='엔플릭스'/></Link></h1>
       <nav>
         <span>메뉴</span>
         <ul>
