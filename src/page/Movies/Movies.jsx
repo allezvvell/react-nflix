@@ -78,14 +78,13 @@ const Movies = () => {
             {data?.results.map((movie,index)=><Col key={index} lg={4} md={6} xs={12}><SearchMovieCard movie={movie}/></Col>)}
             </Row>
               <ReactPaginate
-                nextLabel="next >"
+                nextLabel=">"
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={3}
                 marginPagesDisplayed={2}
                 pageCount={data?.total_pages}
                 forcePage={page - 1}
                 previousLabel="<"
-                nextLabel=">"
                 pageClassName="page-item"
                 pageLinkClassName="page-link"
                 previousClassName="page-item"
