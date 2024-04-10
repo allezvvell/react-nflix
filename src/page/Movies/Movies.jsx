@@ -16,7 +16,6 @@ const Movies = () => {
   const query = searchParams.get('q');
   const [page, setPage] = useState(1);
   const {data,isLoading,isError,error} = useSearchMoviesQuery(query,page);
-  const [movieList,setMovieList] = useState([]);
   const handlePageClick = ({selected}) => {
     setPage(selected+1);
   }
