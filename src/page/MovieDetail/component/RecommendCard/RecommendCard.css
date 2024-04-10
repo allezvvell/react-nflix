@@ -1,0 +1,41 @@
+.recommend-card {
+    margin-bottom: 1.5rem;
+    height: 10rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.recommend-card > a {
+    position: relative;
+    display: block;
+    height: 100%;
+    color: #fff;
+}
+
+.recommend-card .img-box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recommend-card .img-box img {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.recommend-card:hover .img-box img {
+    width: 110%;
+}
+.recommend-card .info-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.recommend-card .info-box h3 {
+    font-size: 1.5rem;
+}

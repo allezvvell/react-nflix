@@ -39,6 +39,9 @@
     background:black;
     color: white;
 }
+.detail-content .detail-box {
+    margin-bottom: 6rem;
+}
 .detail-box .poster-col {
     text-align: right;
 }
@@ -58,7 +61,7 @@
 }
 .detail-box .top-list {
     padding-left: 0;
-    margin: 3rem 0 1rem;
+    margin: 3rem 0 3rem;
 }
 .detail-box .top-list li {
     display: inline-block;
@@ -67,7 +70,7 @@
 }
 .detail-box .overview {
     padding: 1rem 0;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
 }
@@ -83,7 +86,25 @@
 .detail-box .bottom-list li {
     margin-bottom: 0.5rem;
 }
-
+.detail-content .detail-tap-box {
+    padding-bottom: 6rem;
+}
+.detail-tap-box .container {
+    padding: 0 2rem;
+}
+.detail-tap-box #detail-tab {
+    margin-bottom: 3rem !important;
+    border-color: rgb(229,9,20);
+}
+.detail-tap-box #detail-tab .nav-link {
+    color: #fff;
+    border: none;
+}
+.detail-tap-box #detail-tab .nav-link.active {
+    background: rgb(229,9,20);
+    color: #fff;
+    
+}
 
 /* 반응형 */
 @media (max-width:1200px){

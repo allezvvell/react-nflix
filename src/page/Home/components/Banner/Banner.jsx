@@ -20,7 +20,6 @@ const Banner = () => {
     slidesToScroll: 1
   }
   const {data,isLoading,isError,error} = usePopularMoviesQuery();
-  console.log(data?.results);
   const movieList = data?.results.slice(0,4);
   if(isLoading){
     return<div className='loader-area'>

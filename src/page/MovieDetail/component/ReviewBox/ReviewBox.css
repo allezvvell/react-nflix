@@ -1,0 +1,31 @@
+.review-box {
+    padding: 1rem;
+    margin:  2rem 0;
+    border: 1px solid rgb(229,9,20);
+    border-radius: 1rem;
+}
+.review-box .review-top {
+    margin-bottom:  1rem;
+}
+.review-box .review-top span:nth-of-type(1) {
+    margin-right: 1rem;
+    font-weight: bold;
+}
+.review-box .review-content .txt-box {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 1rem;
+}
+.review-box .review-content.active .txt-box {
+    display: block;
+}
+.review-box .review-content .more-btn:before {
+    content: '더보기';
+    color: #fff;
+    text-decoration: underline;
+}
+.review-box .review-content.active .more-btn:before {
+    content: '접기';
+}
