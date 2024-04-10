@@ -14,7 +14,7 @@ const getVideoId = () => {
         setVideoId(trailer.key);
         return
     }
-    setVideoId(data?.results[0].key)
+    setVideoId(data?.results[0].key);
 }
 const opts = {
     playerVars:{
@@ -30,11 +30,11 @@ useEffect(()=>{
   return (
     <Modal show={show} onHide={closeModal} className='video-modal'>
         <Modal.Header closeButton>
-            <Modal.Title>Relate Video</Modal.Title>
+            <Modal.Title>Related Video</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <YouTube
-                videoId={videoId}    
+                videoId={videoId} 
                 opts={opts}  
                 />
         </Modal.Body>

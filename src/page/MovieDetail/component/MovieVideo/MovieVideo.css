@@ -1,9 +1,12 @@
 .video-modal {
     display: flex !important;
     color: #fff;
+    justify-content: center;
+    align-items: center;
 }
 .video-modal .modal-dialog {
     max-width: none;
+    width: 60%;
 }
 .video-modal .modal-dialog .modal-content {
     background-color: #111;
@@ -15,4 +18,22 @@
 }
 .video-modal .modal-dialog .modal-content .modal-header {
     border-bottom: none;
+}
+.video-modal iframe {
+    width: 100%;
+    height: 25rem;
+}
+
+
+@media (max-width:1024px){
+    .video-modal .modal-dialog {
+        max-width: none;
+        width: 80%;
+    }
+}
+@media (max-width:480px){
+    .video-modal .modal-dialog {
+        max-width: none;
+        width: 90%;
+    }
 }
