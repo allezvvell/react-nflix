@@ -18,7 +18,7 @@ const getVideoId = () => {
 }
 const opts = {
     playerVars:{
-        origin: window.location.origin
+        origin: 'https://react-nflix.netlify.app'
     }
 }
 
