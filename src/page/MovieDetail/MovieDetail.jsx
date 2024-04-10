@@ -5,7 +5,7 @@ import { Bars } from 'react-loader-spinner';
 import Alert from 'react-bootstrap/Alert';
 import noImage from '../../assets/noImage.jpg';
 import './MovieDetail.css';
-import { Container,Row,Col,Button,Modal } from 'react-bootstrap';
+import { Container,Row,Col,Button } from 'react-bootstrap';
 import { Badge } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-regular-svg-icons';
