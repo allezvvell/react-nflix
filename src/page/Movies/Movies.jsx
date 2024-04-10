@@ -11,14 +11,12 @@ import SearchMovieCard from './component/SearchMovieCard/SearchMovieCard';
 import Alert from 'react-bootstrap/Alert';
 
 
-
-
 const Movies = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get('q');
   const [page, setPage] = useState(1);
-  const [sort,setSort] = useState(null);
-  const {data,isLoading,isError,error} = useSearchMoviesQuery(query,page,sort);
+  const {data,isLoading,isError,error} = useSearchMoviesQuery(query,page);
+  const [movieList,setMovieList] = useState([]);
   const handlePageClick = ({selected}) => {
     setPage(selected+1);
   }
@@ -49,11 +47,9 @@ const Movies = () => {
               <Dropdown.Menu>
                 <Dropdown.Item href="#" onClick={(e)=>{
                   e.preventDefault();
-                  setSort('popularity.desc')
                   }}>인기 높은순</Dropdown.Item>
                 <Dropdown.Item href="#" onClick={(e)=>{
                   e.preventDefault();
-                  setSort('popularity.asc')
                   }}>인기 낮은순</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
@@ -64,11 +60,9 @@ const Movies = () => {
               <Dropdown.Menu>
                 <Dropdown.Item href="#" onClick={(e)=>{
                   e.preventDefault();
-                  setSort('vote_average.desc')
                   }}>평점 높은순</Dropdown.Item>
                 <Dropdown.Item href="#" onClick={(e)=>{
                   e.preventDefault();
-                  setSort('vote_average.asc')
                   }}>평점 낮은순</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

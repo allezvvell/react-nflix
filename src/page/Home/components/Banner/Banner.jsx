@@ -7,6 +7,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Alert from 'react-bootstrap/Alert';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const Banner = () => {
   const settings = {
@@ -44,7 +49,10 @@ const Banner = () => {
           <Container>
             <div className='txt-box'>
               <h2>{movie.title}</h2>
-              <p>{movie.overview}</p>
+              <p>
+                <span className='overview-box'>{movie.overview}</span>
+                <Link to={`/movies/${movie.id}`} className='detail-link'>상세보기 <FontAwesomeIcon icon={faChevronRight} /></Link>
+              </p>
             </div>
           </Container>
         </div>

@@ -13,7 +13,7 @@ const MovieCarousel = ({movies,title,icon,responsive}) => {
         <Carousel
             infinite={true}
             centerMode={true}
-            itemClass='movie-carousel p-1'
+            itemClass='movie-carousel'
             containerClass='carousel-container'
             responsive={responsive}
         >

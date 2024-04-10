@@ -68,6 +68,23 @@
     opacity: 1;
     transform: translateX(0);
 }
+.slick-active .txt-box p .overview-box {
+    display: block;
+    margin-bottom: 1rem;
+}
+.slick-active .txt-box .detail-link {
+    display: inline-block;
+    width: 8rem;
+    color: #000;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2.5;
+    background: #fff;
+    border-radius: 0.5rem;
+}
+.slick-active .txt-box .detail-link:hover {
+    opacity: 0.9;
+}
 
 @media (max-width: 786px){
     /* 로더 */
@@ -91,6 +108,15 @@
     .slick-item .txt-box p {
         font-size: 1.2rem;
     }
+    .slick-item .txt-box p .overview-box {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    .slick-item .txt-box p .detail-link {
+        font-size: 1.2rem;
+    }
 }
 @media (max-width: 480px){
     /* slick */
@@ -102,9 +128,6 @@
     }
     .slick-item .txt-box {
         width: 90%;
-    }
-    .slick-item .txt-box p {
-        display: none;
     }
 }
 
