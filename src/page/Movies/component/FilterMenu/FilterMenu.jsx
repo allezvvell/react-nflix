@@ -19,7 +19,8 @@ const FilterMenu = ({setMovieList,initialMovieList}) => {
             case 'scoreDesc' :
                 newMovieList.sort((a,b) => b.vote_average - a.vote_average);
                 break;
-            case 'scoreAsc' :
+            //case 'scoreAsc' :
+            default:
                 newMovieList.sort((a,b) => a.vote_average - b.vote_average);
                 break;         
         }
