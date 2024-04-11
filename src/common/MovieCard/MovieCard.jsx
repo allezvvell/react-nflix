@@ -28,7 +28,7 @@ const MovieCard = ({movie}) => {
       <Link to={`/movies/${movie.id}`}>
         <div className='movie-info'>
           <h3>{movie.title}</h3>
-          <p>{movie.release_date}</p>
+          <p>{movie.release_date.substr(0,4)}</p>
           {showGenre(movie.genre_ids).map((id,index) => {
             return <Badge bg='danger' key={index}>{id}</Badge>
           })}

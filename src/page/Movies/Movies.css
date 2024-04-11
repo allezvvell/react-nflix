@@ -5,6 +5,10 @@
 .movies-wrap .movie-card {
     margin-bottom: 1.5rem;
 }
+.no-result-wrap {
+    text-align: center;
+    color: #fff;
+}
 
 /* pagination */
 .movies-wrap .pagination {
@@ -20,10 +24,12 @@
     color: #fff;
     background: rgb(229,9,20);
 }
-.movies-wrap .page-item {
 
+@media (max-width:768px) {
+    .movies-wrap .page-link {
+        font-size: 1.4rem;
+    }
 }
-
 @media (max-width:570px) {
     .movies-wrap {
         padding: 6rem 3rem;

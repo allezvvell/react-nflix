@@ -92,7 +92,7 @@ const MovieDetail = () => {
             id="detail-tab"
             className="mb-3"
             >
-              <Tab eventKey="review" title="리뷰">
+              <Tab eventKey="review" title={`리뷰`}>
                 <MovieReview id={id}/>
               </Tab>
               <Tab eventKey="profile" title="관련영화">
