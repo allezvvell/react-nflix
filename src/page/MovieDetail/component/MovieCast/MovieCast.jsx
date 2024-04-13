@@ -14,7 +14,7 @@ const MovieCast = ({id}) => {
             (creditData?.cast.slice(0,6).map((actor,index) => {
                 return <Col key={index} lg={2} md={3}>
                     <div className='cast-box'>
-                        <img src={`https://media.themoviedb.org/t/p/w138_and_h175_face/${actor.profile_path}`}/>
+                        <img src={`https://media.themoviedb.org/t/p/w138_and_h175_face/${actor.profile_path}`} alt={actor.name}/>
                         <div className='txt-box'>
                             <span>{actor.name}</span>
                             <p>{actor.character}</p>
