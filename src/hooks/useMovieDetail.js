@@ -30,3 +30,11 @@ export const useMovieVideoQuery = (id) => {
         select:(result) => result.data
     })
 }
+
+export const useMovieCreditsQuery = (id) => {
+    return useQuery({
+        queryKey:['movie-credit',id],
+        queryFn:() => fetchMovieDetail(`${id}/credits?lang=ko-KR`),
+        select:(result) => result.data
+    })
+}

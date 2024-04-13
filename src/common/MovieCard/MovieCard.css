@@ -63,3 +63,9 @@
 .movie-info .detail > div:nth-of-type(1) {
     margin-left: 0;
 }
+
+@media (max-width: 465px){
+    .movie-card {
+        height: 280px;
+    }
+}

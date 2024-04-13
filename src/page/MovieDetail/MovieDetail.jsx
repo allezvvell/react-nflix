@@ -16,6 +16,7 @@ import MovieReview from './component/MovieReview/MovieReview';
 import MovieRecommand from './component/MovieRecommend/MovieRecommand';
 import Footer from '../../common/Footer/Footer'
 import MovieVideo from './component/MovieVideo/MovieVideo';
+import MovieCast from './component/MovieCast/MovieCast';
 
 
 
@@ -84,6 +85,8 @@ const MovieDetail = () => {
         {/* //detail-box */}
         <MovieVideo show={show} closeModal={closeModal} id={id}/>
         {/* //Video Modal */}
+        <MovieCast id={id}/>
+        {/* // movie cast */}
         <div className='detail-tap-box'>
           <Container>
             <Tabs

@@ -90,7 +90,7 @@
     padding-bottom: 6rem;
 }
 .detail-tap-box .container {
-    padding: 0 2rem;
+    padding: 0 5rem;
 }
 .detail-tap-box #detail-tab {
     margin-bottom: 3rem !important;
@@ -113,6 +113,9 @@
     }
     .detail-box .poster-col img {
         width: 100%;
+    }
+    .detail-tap-box .container {
+        padding: 0 1rem;
     }
 }
 @media (max-width:992px){
